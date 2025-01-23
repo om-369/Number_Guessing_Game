@@ -9,6 +9,9 @@ body {
     align-items: center;
     background: linear-gradient(135deg, #4CAF50, #81C784); /* Attractive gradient background */
     color: #333;
+    background-image: url('guess_number.jpg'); /* Add this line */
+    background-size: cover; /* Add this line */
+    background-position: center; /* Add this line */
 }
 
 /* Container styling */
