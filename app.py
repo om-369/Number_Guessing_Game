@@ -22,6 +22,7 @@ class NumberGuessingGame:
                 else:
                     print(f"Congratulations! You guessed the number in {self.attempts} attempts.")
                     return True
+                
                 remaining_attempts = self.max_attempts - self.attempts
                 print(f"You have {remaining_attempts} attempts left.")
             except ValueError:
@@ -34,6 +35,7 @@ class NumberGuessingGame:
 def main():
     game = NumberGuessingGame()
     game.play()
+    game.display_secret_number()  # Display the secret number after the game ends
     while True:
         play_again = input("Do you want to play again? (yes/no): ").lower()
         if play_again != "yes":
