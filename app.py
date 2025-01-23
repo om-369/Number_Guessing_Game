@@ -1,7 +1,7 @@
 import random
 
 class NumberGuessingGame:
-    def __init__(self, min_range=1, max_range=100, max_attempts=10):
+    def __init__(self, min_range=1, max_range=100, max_attempts=3):
         self.secret_number = random.randint(min_range, max_range)
         self.min_range = min_range
         self.max_range = max_range
