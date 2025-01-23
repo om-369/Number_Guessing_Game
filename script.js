@@ -1,14 +1,6 @@
-let secretNumber;
+let secretNumber = Math.floor(Math.random() * 100) + 1; // Random number between 1 and 100
 let maxAttempts = 10; 
-let attempts;
-
-function startGame() {
-    secretNumber = Math.floor(Math.random() * 100) + 1; // Random number between 1 and 100
-    attempts = 0;
-    document.getElementById('feedback').innerText = '';
-    document.getElementById('attempts-info').innerText = '';
-    document.getElementById('play-again').style.display = 'none';
-}
+let attempts = 0;
 
 document.getElementById('submit-guess').addEventListener('click', function() {
     const userGuess = Number(document.getElementById('user-guess').value);
@@ -41,8 +33,9 @@ document.getElementById('submit-guess').addEventListener('click', function() {
 });
 
 document.getElementById('play-again').addEventListener('click', function() {
-    startGame(); // Reset the game state
+    secretNumber = Math.floor(Math.random() * 100) + 1; // Reset the secret number
+    attempts = 0; // Reset attempts
+    document.getElementById('feedback').innerText = '';
+    document.getElementById('attempts-info').innerText = '';
+    this.style.display = 'none'; // Hide play again button
 });
-
-// Start a new game when loading the page
-startGame();
